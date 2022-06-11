@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "437413447616",
+    "firebase_url": "https://famyly-tacker-default-rtdb.firebaseio.com",
+    "project_id": "famyly-tacker",
+    "storage_bucket": "famyly-tacker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437413447616:android:90d0fff9102de6a644ea25",
+        "android_client_info": {
+          "package_name": "com.jkl.familytrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437413447616-ms9i98gk6ol5qg5a7rtm4qopmk0ig4cb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jkl.familytrack",
+            "certificate_hash": "7b790d837fc1a8b6bec5e2db307c1798fab66bbf"
+          }
+        },
+        {
+          "client_id": "437413447616-0pkgbc8v7a4qi7g2d39vgae83rr860cb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL1LWFbJyyROScSnX6v1Yi_uVG1o2SYGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437413447616-0pkgbc8v7a4qi7g2d39vgae83rr860cb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437413447616:android:807a2e9b66348a3a44ea25",
+        "android_client_info": {
+          "package_name": "com.jkl.familytrackdiplom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437413447616-kgu2gr2fp4un377a0s698ukirinj4h44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jkl.familytrackdiplom",
+            "certificate_hash": "7b790d837fc1a8b6bec5e2db307c1798fab66bbf"
+          }
+        },
+        {
+          "client_id": "437413447616-0pkgbc8v7a4qi7g2d39vgae83rr860cb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL1LWFbJyyROScSnX6v1Yi_uVG1o2SYGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437413447616-0pkgbc8v7a4qi7g2d39vgae83rr860cb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437413447616:android:675f83ed0e9dae8044ea25",
+        "android_client_info": {
+          "package_name": "com.mehmettas.familytrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437413447616-fh5drfivs9l68473j7hgpdkrktmk62km.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mehmettas.familytrack",
+            "certificate_hash": "7b790d837fc1a8b6bec5e2db307c1798fab66bbf"
+          }
+        },
+        {
+          "client_id": "437413447616-0pkgbc8v7a4qi7g2d39vgae83rr860cb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL1LWFbJyyROScSnX6v1Yi_uVG1o2SYGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437413447616-0pkgbc8v7a4qi7g2d39vgae83rr860cb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

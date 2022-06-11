@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideStart"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2"
+            android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".8"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMessageDialog"
+            android:gravity="center_horizontal"
+            android:textSize="13sp"
+            android:text="@string/familyCreationSuccess"
+            android:textColor="@color/textColorRegular"
+            android:layout_width="0dp"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:ems="7"
+            android:lines="2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSuccessHeader"
+            android:gravity="center_horizontal"
+            android:textSize="13sp"
+            android:text="@string/familyCreationSuccess"
+            android:textColor="@color/textColorRegular"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="false"
+            tools:text="@string/familyIDtext"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtMessageDialog"
+            app:layout_constraintEnd_toStartOf="@id/txtSuccessContent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSuccessContent"
+            android:gravity="center_horizontal"
+            android:textSize="13sp"
+            android:text="@string/familyCreationSuccess"
+            android:textColor="@color/colorRed"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginStart="3dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="12345"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtSuccessHeader"
+            app:layout_constraintStart_toEndOf="@id/txtSuccessHeader"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

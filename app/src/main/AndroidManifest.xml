@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jkl.familytrackdiplom">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="com.jkl.familytrack.CoreApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FamilyTrackDiplom">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name="com.jkl.familytrack.ui.login.LoginActivity"
+            android:theme="@style/Theme.FamilyTrackDiplom.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jkl.familytrack.ui.main.MainActivity"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <service
+            android:name="com.jkl.familytrack.utils.service.LocationMonitoringService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.jkl.familytrack.utils.service.ListenerServiceRestarter"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped"
+            tools:ignore="ExportedReceiver" />
+
+        <!--Google MAP API key-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBDhefEXXJslNkxjt68sWVX6anijvN1yhg" />
+    </application>
+
+</manifest>
