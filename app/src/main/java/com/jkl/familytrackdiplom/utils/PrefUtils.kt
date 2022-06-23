@@ -3,8 +3,7 @@ package com.jkl.familytrackdiplom.utils
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
-import com.jkl.familytrack.CoreApp
+import com.jkl.familytrackdiplom.CoreApp
 import com.jkl.familytrack.data.remote.model.family.Family
 import com.jkl.familytrack.data.remote.model.family.Member
 import com.jkl.familytrack.utils.AppConstants.ALL_MEMBERS
@@ -14,10 +13,7 @@ import com.jkl.familytrack.utils.AppConstants.IS_FAMILY_LOGGED
 import com.jkl.familytrack.utils.AppConstants.MEMBER_DETAIL
 import com.jkl.familytrack.utils.AppConstants.PREF_NAME
 import com.jkl.familytrack.utils.extensions.setValue
-import java.util.*
 import kotlin.collections.ArrayList
-import org.json.JSONArray
-
 
 
 object PrefUtils {

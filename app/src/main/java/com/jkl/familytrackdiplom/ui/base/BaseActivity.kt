@@ -1,4 +1,4 @@
-package com.jkl.familytrack.ui.base
+package com.jkl.familytrackdiplom.ui.base
 
 import android.app.AlertDialog
 import android.content.Context
@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import com.jkl.familytrack.ui.base.IBaseNavigator
 import com.jkl.familytrackdiplom.utils.customscreen.LoadingDialog
 
 abstract class BaseActivity : AppCompatActivity(), IBaseNavigator {

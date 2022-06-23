@@ -1,4 +1,4 @@
-package com.jkl.familytrack.ui.login
+package com.jkl.familytrackdiplom.ui.login
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -6,17 +6,14 @@ import android.content.Intent
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.MultiplePermissionsReport
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.jkl.familytrackdiplom.R
 import com.jkl.familytrack.data.remote.model.family.Family
 import com.jkl.familytrack.data.remote.model.family.Member
 import com.jkl.familytrack.data.remote.model.location.MemberLocation
 import com.jkl.familytrack.utils.IDGenerator
-import com.jkl.familytrack.ui.base.BaseActivity
+import com.jkl.familytrackdiplom.ui.base.BaseActivity
+import com.jkl.familytrack.ui.login.ILoginNavigator
+import com.jkl.familytrack.ui.login.LoginViewModel
 import com.jkl.familytrack.ui.main.MainActivity
 import com.jkl.familytrack.utils.AppConstants.FAMILIES
 import com.jkl.familytrack.utils.AppConstants.FAMILY_ID
@@ -27,7 +24,12 @@ import com.jkl.familytrack.utils.CommonUtils
 import com.jkl.familytrack.utils.DialogUtils
 import com.jkl.familytrackdiplom.utils.PrefUtils
 import com.jkl.familytrack.utils.extensions.launchActivity
-import com.jkl.familytrack.utils.service.LocationMonitoringService
+import com.jkl.familytrackdiplom.utils.service.LocationMonitoringService
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import kotlinx.android.synthetic.main.activity_login.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

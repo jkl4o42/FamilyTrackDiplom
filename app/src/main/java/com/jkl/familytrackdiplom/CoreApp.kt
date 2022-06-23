@@ -1,4 +1,4 @@
-package com.jkl.familytrack
+package com.jkl.familytrackdiplom
 
 import android.app.Application
 import android.content.Context
@@ -20,6 +20,4 @@ class CoreApp: Application() {
     private fun configureDI() {
         startKoin(this, appModule)
     }
-
-
 }

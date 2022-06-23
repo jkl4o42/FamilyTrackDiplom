@@ -1,4 +1,4 @@
-package com.jkl.familytrack.utils.service
+package com.jkl.familytrackdiplom.utils.service
 
 import android.Manifest
 import android.app.*
@@ -13,7 +13,6 @@ import androidx.annotation.Nullable
 import java.util.*
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -26,6 +25,7 @@ import com.jkl.familytrackdiplom.R
 import com.jkl.familytrack.data.remote.model.family.Member
 import com.jkl.familytrack.data.remote.model.location.MemberLocation
 import com.jkl.familytrack.ui.main.MainActivity
+import com.jkl.familytrack.utils.service.ListenerServiceRestarter
 import com.jkl.familytrackdiplom.utils.PrefUtils
 import kotlin.collections.ArrayList
 
@@ -37,17 +37,14 @@ class LocationMonitoringService : Service(),
     private var timer: Timer? = null
     private var timerTask: TimerTask? = null
 
-
     private val TAG = LocationMonitoringService::class.java.simpleName
     lateinit var mLocationClient: GoogleApiClient
     private var mLocationRequest = LocationRequest()
-
 
     val ACTION_LOCATION_BROADCAST =
         LocationMonitoringService::class.java.name + "LocationBroadcast"
     val EXTRA_LATITUDE = "extra_latitude"
     val EXTRA_LONGITUDE = "extra_longitude"
-
 
     companion object {
         const val LOCATION_INTERVAL = 5000L
@@ -137,15 +134,12 @@ class LocationMonitoringService : Service(),
         {
             // Update Current Member Location on every change
             MainActivity.sendCurrentMemberLocation(currentMemberLocation)
-
-
             if(MainActivity.map!=null)
             {
                 // CONTINUE ...
                 // createMarker(this,MainActivity.map!!, currentMemberLocation.lat, currentMemberLocation.lng,R.drawable.girl)
             }
         }
-
     }
 
     override fun onConnectionFailed(connectionResult: ConnectionResult) {

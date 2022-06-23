@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="com.jkl.familytrack.CoreApp"
+        android:name=".CoreApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,7 +20,7 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
         <activity
-            android:name="com.jkl.familytrack.ui.login.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:theme="@style/Theme.FamilyTrackDiplom.NoActionBar"
             android:exported="true">
             <intent-filter>
@@ -34,7 +34,7 @@
             android:windowSoftInputMode="adjustNothing" />
 
         <service
-            android:name="com.jkl.familytrack.utils.service.LocationMonitoringService"
+            android:name=".utils.service.LocationMonitoringService"
             android:enabled="true" />
 
         <receiver

@@ -4,16 +4,14 @@ import android.content.res.Resources
 import android.os.Build
 import android.os.Handler
 import android.view.View
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.jkl.familytrackdiplom.R
-import com.jkl.familytrack.ui.base.BaseActivity
+import com.jkl.familytrackdiplom.ui.base.BaseActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.google.android.gms.maps.model.*
-import com.jkl.familytrack.data.remote.model.MarkerData
 import com.jkl.familytrack.ui.main.FamilyAdapter.FamilyAdapter
 import com.jkl.familytrack.utils.DialogUtils
 import com.jkl.familytrack.utils.extensions.createMarker
@@ -33,7 +31,7 @@ import com.jkl.familytrack.utils.AppConstants.FAMILY_ID
 import com.jkl.familytrack.utils.AppConstants.FAMILY_MEMBERS
 import com.jkl.familytrack.utils.AppConstants.LOCATION
 import com.jkl.familytrack.utils.AppConstants.MEMBER_ID
-import com.jkl.familytrack.utils.service.LocationMonitoringService
+import com.jkl.familytrackdiplom.utils.service.LocationMonitoringService
 
 class MainActivity : BaseActivity(), IMainNavigator, OnMapReadyCallback,
     FamilyAdapter.FamilyAdapterListener {
@@ -229,12 +227,12 @@ class MainActivity : BaseActivity(), IMainNavigator, OnMapReadyCallback,
                 markers[i].position = LatLng(memberLocations[i].lat,memberLocations[i].lng)
             }
         }
+
         Handler().postDelayed({
             listenForOtherMembers()
-            if(map!=null)
-                zoomToAllMarkers(map!!,markers)
+//            if(map!=null)
+//                zoomToAllMarkers(map!!,markers)
         },3000)
-
 
     }
 
